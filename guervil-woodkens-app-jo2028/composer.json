@@ -1,0 +1,11 @@
+{
+    "name": "guervil-woodkens/jo2028",
+    "description": "Site web des Jeux Olympiques 2028 (Los Angeles) - projet E6 BTS SIO option SLAM",
+    "type": "project",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^12.5"
+    }
+}

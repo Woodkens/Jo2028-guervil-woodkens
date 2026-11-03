@@ -1,0 +1,5 @@
+# Dépendances installées par Composer (elles se réinstallent avec "composer install")
+/vendor/
+
+# Fichier temporaire de PHPUnit
+.phpunit.result.cache

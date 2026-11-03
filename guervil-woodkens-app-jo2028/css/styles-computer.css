@@ -1,0 +1,352 @@
+/* -------------------------------------- */
+/* Styles pour toutes les tailles d'écran */
+/* -------------------------------------- */
+
+/* --------------------------------------------------- */
+/* Palette JO 2028 (rappel, pas de variables CSS ici)  */
+/* Noir       : #1b1b1b                                 */
+/* Or         : #d7c378                                 */
+/* Bleu JO    : #0085c7                                 */
+/* Rouge JO   : #df0024                                 */
+/* Vert JO    : #009f3d                                 */
+/* Jaune JO   : #f4c300                                 */
+/* --------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background-color: #f2efe6;
+  background-image:
+    radial-gradient(circle at 10% 10%, rgba(0, 133, 199, 0.08), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(223, 0, 36, 0.07), transparent 40%),
+    radial-gradient(circle at 20% 90%, rgba(0, 159, 61, 0.07), transparent 40%),
+    radial-gradient(circle at 90% 90%, rgba(244, 195, 0, 0.08), transparent 40%);
+  color: #1b1b1b;
+}
+
+h1 {
+  color: #1b1b1b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: clamp(1.4rem, 5vw, 2.6rem); /* Le titre s'adapte à la largeur de l'écran */
+  text-align: center;
+  margin: 20px 10px;
+}
+
+h2, h3 {
+  color: #1b1b1b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* --------------------------- */
+/* En-tête façon "Look of the Games" */
+/* --------------------------- */
+header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 30px 0;
+  padding: 20px 5%;
+  background: linear-gradient(120deg, #1b1b1b 0%, #1b1b1b 60%, #0085c7 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Bandeau "anneaux" en bas du header */
+header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #0085c7 0%, #0085c7 25%, #df0024 25%, #df0024 50%, #f4c300 50%, #f4c300 75%, #009f3d 75%, #009f3d 100%);
+}
+
+/* Effet sur les liens au survol */
+/* Remarque : .link-home reprend le style de nav a, défini dans les media queries desktop/mobile */
+.link-category:hover {
+  color: #1b1b1b; /* Changement de couleur au survol */
+  background-color: #d7c378; /* Changement de fond au survol */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transform: translateY(-6px) scale(1.03);
+}
+
+/* Styles pour les tableaux */
+/* ------------------------ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* Style pour les en-têtes de colonnes */
+th {
+  background: linear-gradient(90deg, #1b1b1b, #0085c7 40%, #009f3d 100%);
+  color: #ffffff;
+  padding: 14px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: clamp(0.75rem, 1.4vw, 0.95rem); /* Le texte de l'en-tête s'adapte à la largeur de l'écran */
+  letter-spacing: 1px;
+}
+
+/* Style pour les cellules du tableau */
+td {
+  border-bottom: 1px solid #e5e0d0;
+  padding: 12px 10px;
+  background-color: #ffffff;
+  font-size: clamp(0.75rem, 1.3vw, 1rem); /* Le texte des cellules s'adapte à la largeur de l'écran */
+}
+
+/* Style pour les lignes impaires du tableau */
+tr:nth-child(odd) td {
+  background-color: #f9f6ec;
+}
+
+/* Effet au survol d'une ligne */
+tbody tr:hover td {
+  background-color: #d7c378;
+  color: #1b1b1b;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Styles pour les formulaires */
+/* --------------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 80%;
+  max-width: 400px; /* Largeur maximale du formulaire */
+  margin: 20px auto;
+  padding: 30px 25px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  border-top: 8px solid transparent;
+  border-image: linear-gradient(90deg, #0085c7, #df0024, #f4c300, #009f3d) 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+label {
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1b1b1b;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+  border: 2px solid #e5e0d0;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #0085c7;
+  box-shadow: 0 0 0 4px rgba(0, 133, 199, 0.2);
+}
+
+input[type="submit"] {
+  background: linear-gradient(135deg, #1b1b1b, #3a3a3a);
+  color: #d7c378;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 14px;
+  border-radius: 50px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour un effet de survol en douceur */
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(135deg, #d7c378, #f4c300);
+  color: #1b1b1b;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
+}
+
+/* Style pour les images */
+/* --------------------- */
+figure {
+  display: flex;
+  height: auto;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ------------------------------ */
+/* Styles pour la version desktop */
+/* ------------------------------ */
+@media screen and (min-width: 1025px) {
+  main {
+    width: 90%;
+    margin: 50px auto; /* Centrer le conteneur sur la page */
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-size: 18px;
+    gap: 15px;
+  }
+
+  nav li {
+    width: auto; /* Largeur fixe pour chaque élément du menu */
+  }
+
+  nav a,
+  .link-home {
+    display: block;
+    text-decoration: none;
+    color: #d7c378;
+    background-color: #1b1b1b; /* Fond du menu */
+    padding: 14px 22px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.95em;
+    letter-spacing: 1px;
+    position: relative;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease; /* Transition pour un effet de survol en douceur */
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  nav a:hover,
+  .link-home:hover {
+    color: #1b1b1b; /* Changement de couleur au survol */
+    background-color: #d7c378; /* Changement de fond au survol */
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Affichage des données de l'utilisateur */
+  .info-login {
+    margin: 50px auto;
+    text-align: center;
+    font-size: 2vw;
+    color: #1b1b1b;
+    font-weight: bold;
+  }
+
+  /* Conteneur du <main> conteant les catégories utilisant flexbox */
+  /* ------------------------------------------------------------- */
+  .category-site {
+    display: flex;
+    justify-content: space-around; /* Répartir les éléments de manière égale sur l'axe principal */
+    width: 90%;
+    margin: auto; /* Centrer le conteneur sur la page */
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  /* Styles pour les liens donnant l'impression d'être des boutons */
+  /* ------------------------------------------------------------- */
+  .link-category {
+    display: flex;
+    width: 40%;
+    height: 170px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px;
+    margin: 20px auto;
+    padding: 15px;
+    background: linear-gradient(135deg, #1b1b1b, #2e2e2e);
+    font-size: clamp(0.9rem, 1.6vw, 1.3rem); /* Taille contenue même pour les libellés longs */
+    line-height: 1.3;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d7c378;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+    border-bottom: 8px solid #0085c7;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transition pour un effet de survol en douceur */
+  }
+
+  /* Chaque bouton de catégorie reprend une couleur des anneaux olympiques */
+  .link-category:nth-child(4n+1) {
+    border-bottom-color: #0085c7; /* Bleu */
+  }
+
+  .link-category:nth-child(4n+2) {
+    border-bottom-color: #df0024; /* Rouge */
+  }
+
+  .link-category:nth-child(4n+3) {
+    border-bottom-color: #009f3d; /* Vert */
+  }
+
+  .link-category:nth-child(4n+4) {
+    border-bottom-color: #f4c300; /* Jaune */
+  }
+
+  /* Effet sur les liens au survol */
+  .link-category:hover {
+    color: #1b1b1b; /* Changement de couleur au survol */
+    background-color: #d7c378; /* Changement de fond au survol */
+  }
+
+  /* Propriétés du footer */
+  footer {
+    display: flex;
+    margin: 60px auto 0;
+    width: 100%;
+    height: 40vh;
+    padding: 20px;
+    justify-content: center; /* Répartir les éléments de manière égale sur l'axe principal */
+    align-items: center;
+    background: linear-gradient(120deg, #1b1b1b 0%, #1b1b1b 70%, #009f3d 100%);
+    color: #d7c378;
+    position: relative;
+    overflow: hidden; /* Empêche tout contenu (logo) de déborder du bloc */
+    box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Le logo (ou toute image) dans le footer ne doit jamais dépasser sa hauteur */
+  footer img {
+    width: auto;
+    max-width: 200px;
+    max-height: 80%;
+    height: auto;
+    object-fit: contain;
+    box-shadow: none; /* Le logo n'a pas besoin de l'ombre générale des images */
+  }
+
+  footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: linear-gradient(90deg, #0085c7 0%, #0085c7 25%, #df0024 25%, #df0024 50%, #f4c300 50%, #f4c300 75%, #009f3d 75%, #009f3d 100%);
+  }
+}

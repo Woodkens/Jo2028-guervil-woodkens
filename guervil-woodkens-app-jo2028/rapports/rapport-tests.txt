@@ -1,0 +1,48 @@
+Administrateur
+ [x] Ajout dun administrateur
+ [x] Le mot de passe est hache avec bcrypt
+ [x] Deux mots de passe identiques donnent deux hachages differents
+ [x] Ajout refuse un login deja existant
+ [x] Ajout refuse un mot de passe trop court
+ [x] Ajout refuse un login invalide
+ [x] Ajout refuse les champs vides
+ [x] Ajout conserve apostrophes et accents
+ [x] Modification sans mot de passe conserve l ancien hachage
+ [x] Modification avec nouveau mot de passe change le hachage
+ [x] Modification refuse le login dun autre administrateur
+ [x] Modification permet de garder son propre login
+ [x] Modification dun administrateur inexistant
+ [x] Suppression dun administrateur
+ [x] Impossible de supprimer son propre compte
+ [x] Suppression dun administrateur inexistant
+
+Environnement
+ [x] Phpunit fonctionne
+ [x] Version php suffisante
+ [x] Extension pdo mysql disponible
+ [x] Hachage bcrypt disponible
+
+Pays
+ [x] Ajout dun pays
+ [x] Ajout refuse un pays deja present dans les donnees de test
+ [x] Ajout refuse un pays deja existant
+ [x] Ajout refuse un nom vide ou trop long
+ [x] Ajout conserve apostrophes et accents
+ [x] Une injection sql est traitee comme du texte
+ [x] Modification dun pays
+ [x] Modification refuse le nom dun autre pays
+ [x] Modification permet de garder son propre nom
+ [x] Modification dun pays inexistant
+ [x] Suppression dun pays libre
+ [x] Suppression refusee si le pays est utilise par un athlete
+ [x] Suppression dun pays inexistant
+
+Validation
+ [x] Logins valides
+ [x] Logins invalides
+ [x] Mot de passe de huit caracteres minimum
+ [x] Dates valides
+ [x] Dates invalides
+ [x] Heures valides
+ [x] Heures invalides
+

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Configuration de PHPUnit : où trouver l'autoloader et les tests -->
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+    <testsuites>
+        <testsuite name="JO 2028">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+</phpunit>
